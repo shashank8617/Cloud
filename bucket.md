@@ -1,4 +1,4 @@
-###uploading a static web page to a instance
+#uploading a static web page to a instance
 create index.html
 ```bash
 aws configure
