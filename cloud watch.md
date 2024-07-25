@@ -3,15 +3,17 @@
 
 ## to setup cloud logs 
 
+* to install logs 
+
 ```bash
 sudo yum install awslogs
 ```
-## edit file /etc/awslogs/awscli.conf & change the region
+* edit file /etc/awslogs/awscli.conf & change the region
 ```bash
 vi /etc/awslogs/awscli.conf
 ```
 
-## verify the file /etc/awslogs/awslogs.conf 
+* verify the file /etc/awslogs/awslogs.conf 
 ```bash
 vi /etc/awslogs/awslogs.conf
 ```
@@ -59,13 +61,12 @@ echo "<!DOCTYPE html>
 chown -R apache:apache /var/www/html
 chmod -R 755 /var/www/html
 ```
-### Make the Script Executable and Run It
+* Make the Script Executable and Run It
 ```bash
 chmod +x setup.sh
 ./setup.sh
 ```
-## Verify Apache and the Web Page
-* Check if Apache is running
+* Verify Apache and the Web Page & Check if Apache is running
 ```bash
 systemctl status httpd
 ```
