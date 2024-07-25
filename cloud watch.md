@@ -1,5 +1,4 @@
-# Using AWS Management Console or CLI, create a CloudWatch alarm that triggers when CPU utilization on an EC2 instance exceeds 70% for more than 5 minutes. Configure the alarm to send notifications via Amazon SNS.
-
+# Configure CloudWatch Logs to collect and analyze logs from an EC2 instance running a web server. Demonstrate how to search and filter logs, create metric filters, and set up alarms based on specific log events (e.g., errors or warnings).
 
 ## to setup cloud logs 
 
@@ -83,14 +82,42 @@ sudo systemctl restart httpd
 
 
 
-###Configure CloudWatch Logs to collect and analyze logs from an EC2 instance running a web server. Demonstrate how to search and filter logs, create metric filters, and set up alarms based on specific log events (e.g., errors or warnings).
-
-```bash
-
-```
+# Using AWS Management Console or CLI, create a CloudWatch alarm that triggers when CPU utilization on an EC2 instance exceeds 70% for more than 5 minutes. Configure the alarm to send notifications via Amazon SNS.
 
 
-###Create a CloudWatch dashboard that displays key metrics (e.g., CPU utilization, network traffic) from multiple AWS services (e.g., EC2, S3). Customize the dashboard layout and widgets to provide a comprehensive overview of application performance.
+* Create an SNS Topic and Subscription
+
+* Open the Amazon SNS console
+* In the left navigation pane, choose Topics
+* Choose Create topic
+* Select the topic type (Standard or FIFO), give it a name, and choose Create topic
+* Select the newly created topic, and then choose Create subscription
+* Choose the protocol select Email enter the endpoint as email address and choose Create subscription
+* Confirm the subscription by clicking the confirmation link sent to your email
+
+** Create the CloudWatch Alarm
+
+* Open the CloudWatch console
+* In the left navigation pane, choose Alarms, then choose All alarms
+* Choose Create alarm
+* Choose Select metric
+* In the Browse tab, choose EC2, then Per-Instance Metrics
+* Select the CPUUtilization metric for the specific EC2 instance
+* Click Select metric
+* Configure the alarm
+* Set Period to 5 minutes
+* Under Conditions, set the threshold type to Static
+* Enter 70 in the Greater than field
+* Under Additional configuration, set the number of data points to 1 out of 1 click Next
+* Under Notification, choose In alarm
+* Select Select an existing SNS topic and choose the topic you created earlier
+* Click Next, review the alarm configuration, and choose Create alarm
+
+
+
+
+
+# Create a CloudWatch dashboard that displays key metrics (e.g., CPU utilization, network traffic) from multiple AWS services (e.g., EC2, S3). Customize the dashboard layout and widgets to provide a comprehensive overview of application performance.
 
 ```bash
 
