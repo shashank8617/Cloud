@@ -6,12 +6,12 @@
 ```bash
 sudo yum install awslogs
 ```
-# edit file /etc/awslogs/awscli.conf & change the region
+## edit file /etc/awslogs/awscli.conf & change the region
 ```bash
 vi /etc/awslogs/awscli.conf
 ```
 
-# verify the file /etc/awslogs/awslogs.conf 
+## verify the file /etc/awslogs/awslogs.conf 
 ```bash
 vi /etc/awslogs/awslogs.conf
 ```
@@ -64,17 +64,17 @@ chmod -R 755 /var/www/html
 chmod +x setup.sh
 ./setup.sh
 ```
-Verify Apache and the Web Page
+## Verify Apache and the Web Page
 * Check if Apache is running
 ```bash
 systemctl status httpd
 ```
-Ensure the HTML file is in the correct location
+## Ensure the HTML file is in the correct location
 
 ```bash
 ls /var/www/html
 ```
-
+## to restart
 ```bash
 sudo systemctl restart httpd
 ```
