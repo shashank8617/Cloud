@@ -70,12 +70,12 @@ chmod +x setup.sh
 ```bash
 systemctl status httpd
 ```
-## Ensure the HTML file is in the correct location
+* Ensure the HTML file is in the correct location
 
 ```bash
 ls /var/www/html
 ```
-## to restart
+* to restart
 ```bash
 sudo systemctl restart httpd
 ```
