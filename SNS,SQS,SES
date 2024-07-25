@@ -1,0 +1,19 @@
+1. Check SNS to SQS Subscription
+Ensure that the subscription between the SNS topic and the SQS queue is properly configured.
+Go to the SNS dashboard, select the topic, and check the "Subscriptions" tab to verify that "DemoQueue" is listed as a subscribed endpoint.
+2. Verify SQS Queue Policy
+Ensure the SQS queue policy allows the SNS topic to send messages. The policy should be configured to allow SQS:SendMessage actions from the SNS topic ARN.
+3. Check SNS Message Publishing
+Confirm that the message was successfully published to the SNS topic.
+Go to the SNS dashboard, select the topic, and check the "Publish message" section to see if any messages were sent recently.
+4. Poll for Messages Again
+Ensure you are polling the correct queue. Click "Poll for messages" in the SQS dashboard again and wait for a few moments.
+Make sure you are using the appropriate polling settings. For example, a polling duration of 30 seconds is typical.
+5. Review SQS Message Visibility
+If you have previously received messages, they might be in a "Visibility Timeout" state. Try changing the "Visibility Timeout" setting temporarily to ensure messages can be retrieved.
+6. Check CloudWatch Logs
+Review CloudWatch logs for any potential errors or issues related to SNS or SQS. This can give you insights if there are any problems with message delivery.
+7. Confirm Message Format
+Ensure that the message format is compatible with SQS. SNS typically sends messages in JSON format, so ensure there are no issues with the format.
+8. Message Retention
+Check if the message retention period for the queue is set properly. Messages that exceed this period may not be available.
