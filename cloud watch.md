@@ -1,4 +1,4 @@
-### Using AWS Management Console or CLI, create a CloudWatch alarm that triggers when CPU utilization on an EC2 instance exceeds 70% for more than 5 minutes. Configure the alarm to send notifications via Amazon SNS.
+# Using AWS Management Console or CLI, create a CloudWatch alarm that triggers when CPU utilization on an EC2 instance exceeds 70% for more than 5 minutes. Configure the alarm to send notifications via Amazon SNS.
 
 ```bash
 sudo yum install awslogs
