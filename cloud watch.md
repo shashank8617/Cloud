@@ -78,6 +78,9 @@ ls /var/www/html
 ```bash
 sudo systemctl restart httpd
 ```
+* to get the webpage
+* paste the public ip iun the browser
+
 
 
 
