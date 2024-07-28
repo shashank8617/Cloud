@@ -136,35 +136,19 @@ sudo systemctl restart httpd
 * Select Per-Instance Metrics
 * Select CPUUtilization for the desired instance
 * Click Create widget
-* Network Traffic 
+* create dashboard
+* create data source
+* select s3
+* give data source name (anything)
+* i acknowledge
+* create data source
+* add widget
+* select s3 from left size
+* choose widget type (gauge)
+* click on next
+* click on browse
+* search bucket
+* choose the metric and update the widget
+* and update the time line for 1 minute 
 
-* Click Add widget
-* Select Line
-* Click Configure
-* In the Metrics tab, choose EC2
-* Select Per-Instance Metrics
-* Select NetworkIn and NetworkOut for the desired instance
-* Click Create widget
-* S3 Bucket Size
-
-* Click Add widget
-* Select Number
-* Click Configure
-* In the Metrics tab, choose S3
-* Select BucketSizeBytes
-* Choose Average and Sum for the bucket(s) you want to monitor
-* Click Create widget
-* S3 Number of Objects
-
-* Click Add widget
-* Select Number
-* Click Configure
-* In the Metrics tab, choose S3
-* Select NumberOfObjects
-* Choose Average and Sum for the bucket you want to monitor
-* Click Create widget
-* Customize the Layout
-
-* Drag and resize the widgets to create a layout 
-* Click Save dashboard to save your layout
 
